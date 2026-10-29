@@ -20,7 +20,7 @@ AI providers process requests under their own applicable service terms and data-
 
 ## Retention
 
-Retention differs by purpose. The communications digest clears its cached message snippets and chat names after 30 days under its current configuration. This is **not** a promise that all related information is erased after 30 days. Identifiers, generated summaries, conversation context, saved work/source records, and operational receipts can remain longer while supporting the application's ongoing functions, record continuity, and recovery. There is currently no universal automatic expiry across these records.
+Retention differs by purpose. The communications digest clears its cached message text and chat names after 30 days, and on the same schedule deletes its per-conversation summaries and clears the text of its rendered digests. Its live digest view is rebuilt only from the last 3 days. Records kept by Nima's work assistant (conversation context, saved work/source records and operational receipts) support ongoing work and record continuity and currently have no fixed automatic expiry. This notice therefore does **not** promise that all related information is erased after 30 days.
 
 ## Controls, questions and deletion requests
 
@@ -30,6 +30,6 @@ For private contact, use the [operator's Discord profile](https://discord.com/us
 
 ## Security and changes
 
-Access to the operator's stored records and connected services is restricted. No system can guarantee absolute security. Material changes to these practices will be reflected in this notice.
+Stored Discord message data, including digests, summaries, conversation context, logs and backups, is encrypted at rest on the operator's server (AES-256, Linux filesystem encryption). The decryption key is held separately from the data folders and readable only by the server's administrator account; it resides on the same server. One known exception: the server's swap space is not yet encrypted, so fragments of in-memory data can temporarily appear there; encrypted swap is planned for the next scheduled restart. Off-site backups are separately encrypted. Access to the operator's stored records and connected services is restricted. No system can guarantee absolute security. Material changes to these practices will be reflected in this notice.
 
 This notice concerns Nima's Discord application data. Discord itself handles platform data under [Discord's Privacy Policy](https://discord.com/privacy).
